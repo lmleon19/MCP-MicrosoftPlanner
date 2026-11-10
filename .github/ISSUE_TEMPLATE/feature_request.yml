@@ -1,0 +1,31 @@
+name: Solicitud de mejora
+description: Propone una funcionalidad o un cambio de comportamiento.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describa el resultado que busca, no solo la solución.
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema
+      description: Qué tarea no se puede completar hoy y por qué importa.
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Propuesta
+      description: Cómo debería comportarse la herramienta.
+    validations:
+      required: true
+  - type: textarea
+    id: alcance
+    attributes:
+      label: Alcance
+      description: Qué incluye y qué queda fuera.
+  - type: textarea
+    id: alternativa
+    attributes:
+      label: Alternativas consideradas

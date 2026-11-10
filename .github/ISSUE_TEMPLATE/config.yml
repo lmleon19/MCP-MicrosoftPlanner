@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentación
+    url: https://github.com/lmleon19/MCP-MicrosoftPlanner/blob/main/README.md
+    about: Instrucciones de instalación, configuración y uso.
+  - name: Seguridad
+    url: https://github.com/lmleon19/MCP-MicrosoftPlanner/blob/main/SECURITY.md
+    about: Cómo reportar una vulnerabilidad de forma privada.

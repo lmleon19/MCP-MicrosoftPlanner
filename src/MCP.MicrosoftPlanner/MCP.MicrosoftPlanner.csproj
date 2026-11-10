@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AssemblyName>MCP.MicrosoftPlanner</AssemblyName>
+    <RootNamespace>MCP.MicrosoftPlanner</RootNamespace>
+    <Version>1.0.0</Version>
+    <Authors>Luis Miguel León Valenzuela</Authors>
+    <Company>MCP Microsoft Planner</Company>
+    <Product>MCP Microsoft Planner</Product>
+    <Description>Servidor MCP local para consultar y actualizar Microsoft Planner básico mediante Microsoft Graph v1.0 con autenticación delegada de Microsoft Entra.</Description>
+    <Copyright>Copyright (c) 2026 Luis Miguel León Valenzuela</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/lmleon19/MCP-MicrosoftPlanner</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lmleon19/MCP-MicrosoftPlanner</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>mcp;planner;microsoft-graph;model-context-protocol</PackageTags>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Graph" />
+    <PackageReference Include="Microsoft.Identity.Client" />
+    <PackageReference Include="Microsoft.Identity.Client.Extensions.Msal" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="ModelContextProtocol" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

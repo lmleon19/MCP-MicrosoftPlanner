@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AssemblyName>MCP.MicrosoftPlanner.Desktop</AssemblyName>
+    <RootNamespace>MCP.MicrosoftPlanner.Desktop</RootNamespace>
+    <Version>1.0.0</Version>
+    <Authors>Luis Miguel León Valenzuela</Authors>
+    <Product>MCP Microsoft Planner</Product>
+    <Description>Configurador de escritorio del servidor MCP de Microsoft Planner.</Description>
+    <Copyright>Copyright (c) 2026 Luis Miguel León Valenzuela</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/lmleon19/MCP-MicrosoftPlanner</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lmleon19/MCP-MicrosoftPlanner</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" />
+    <PackageReference Include="Avalonia.Desktop" />
+    <PackageReference Include="Avalonia.Themes.Fluent" />
+    <ProjectReference Include="../MCP.MicrosoftPlanner/MCP.MicrosoftPlanner.csproj" />
+    <AvaloniaResource Include="Assets/**" />
+  </ItemGroup>
+</Project>

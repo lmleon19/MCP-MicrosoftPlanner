@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MCP.MicrosoftPlanner/MCP.MicrosoftPlanner.csproj" />
+    <Project Path="src/MCP.MicrosoftPlanner.Desktop/MCP.MicrosoftPlanner.Desktop.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MCP.MicrosoftPlanner.Tests/MCP.MicrosoftPlanner.Tests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,46 @@
+bin/
+obj/
+TestResults/
+artifacts/
+*.user
+*.suo
+*.userprefs
+.vs/
+.idea/
+*.DotSettings.user
+
+# Salida de scripts/publicar-plataformas.ps1
+dist/
+dist-*/
+
+# Configuración local del usuario
+appsettings.local.json
+.env
+.env.*
+
+# Índice de skills generado por el harness y ajustes locales del editor
+.atl/
+.claude/
+odd/
+specs/
+
+# Resultados de pruebas y cobertura
+*.trx
+*.coverage
+coverage*.xml
+coverage*.json
+*.opencover.xml
+*.log
+
+# Paquetes y archivos temporales
+*.nupkg
+*.snupkg
+*.bak
+*.orig
+*.rej
+*~
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini

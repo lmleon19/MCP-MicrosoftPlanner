@@ -1,0 +1,39 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="MCP.MicrosoftPlanner.Desktop.MainWindow"
+        Title="Configuración de MCP Microsoft Planner" Width="650" Height="600" MinWidth="460" MinHeight="440">
+  <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <StackPanel Margin="24" Spacing="24">
+      <StackPanel Spacing="12">
+        <TextBlock FontSize="22" FontWeight="Bold" Text="Configuración de Microsoft Entra" />
+        <TextBlock TextWrapping="Wrap" Text="Usa el registro de aplicación proporcionado por tu organización." />
+        <StackPanel Spacing="5">
+          <TextBlock Text="Identificador del inquilino (Tenant ID)" />
+          <TextBox x:Name="TenantInput" Watermark="Identificador del inquilino o dominio" />
+        </StackPanel>
+        <StackPanel Spacing="5">
+          <TextBlock Text="Identificador de la aplicación (Client ID)" />
+          <TextBox x:Name="ClientInput" Watermark="Identificador de la aplicación" />
+        </StackPanel>
+        <StackPanel Spacing="5">
+          <CheckBox x:Name="SoloLecturaInput" Content="Solo lectura (sin herramientas de escritura)" />
+          <TextBlock TextWrapping="Wrap" Text="Solicita solo Tasks.Read y oculta las herramientas que modifican Planner." />
+        </StackPanel>
+        <Button Content="Guardar configuración" Click="SaveSettings" HorizontalAlignment="Left" />
+        <TextBlock x:Name="StatusText" TextWrapping="Wrap" />
+        <TextBlock x:Name="RestartHintText" IsVisible="False" TextDecorations="Underline" TextWrapping="Wrap"
+                   Text="Reinicia el servicio MCP en el cliente donde lo estés usando (OpenCode, Claude u otro) para aplicar los cambios." />
+      </StackPanel>
+
+      <StackPanel Spacing="10">
+        <TextBlock FontSize="18" FontWeight="Bold" Text="Conectar el servidor MCP" />
+        <TextBlock TextWrapping="Wrap" Text="Ruta del servidor en este paquete:" />
+        <TextBox x:Name="ServerPathText" IsReadOnly="True" />
+        <Button x:Name="CopyConfigButton" Content="Copiar configuración para OpenCode" Click="CopyOpenCodeConfig" HorizontalAlignment="Left" />
+        <TextBlock x:Name="ServerPathStatusText" TextWrapping="Wrap" />
+      </StackPanel>
+
+      <TextBlock TextWrapping="Wrap" Text="Al cerrar esta ventana, el configurador termina. El servidor MCP se inicia por separado desde tu cliente." />
+    </StackPanel>
+  </ScrollViewer>
+</Window>
