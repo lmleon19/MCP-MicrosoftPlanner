@@ -29,9 +29,9 @@ proyecto según su licencia original.
 
 | Paquete | Versión | Origen |
 | --- | --- | --- |
-| Avalonia (y sus paquetes Native, Skia, Win32, X11, FreeDesktop, Remote.Protocol, BuildServices, Angle.Windows.Natives) | 11.3.22 | https://github.com/AvaloniaUI/Avalonia |
-| Avalonia.Desktop | 11.3.22 | https://github.com/AvaloniaUI/Avalonia |
-| Avalonia.Themes.Fluent | 11.3.22 | https://github.com/AvaloniaUI/Avalonia |
+| Avalonia (y sus paquetes Native, Skia, Win32, X11, FreeDesktop, FreeDesktop.AtSpi, HarfBuzz, Remote.Protocol) | 12.1.6 | https://github.com/AvaloniaUI/Avalonia |
+| Avalonia.Desktop | 12.1.6 | https://github.com/AvaloniaUI/Avalonia |
+| Avalonia.Themes.Fluent | 12.1.6 | https://github.com/AvaloniaUI/Avalonia |
 | Azure.Core | 1.50.0 | https://github.com/Azure/azure-sdk-for-net |
 | HarfBuzzSharp | 8.3.1.1 | https://github.com/AvaloniaUI/HarfBuzzSharp |
 | Microsoft.Bcl.AsyncInterfaces | 8.0.0 | https://github.com/dotnet/runtime |

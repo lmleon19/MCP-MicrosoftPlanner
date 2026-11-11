@@ -4,12 +4,12 @@
 
 <p><strong>Acceda a Planner básico desde el agente de IA que ya utiliza, sin pasar por Work IQ.</strong></p>
 
-<p><a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/tag/v1.0.0">Versión 1.0.0 (pre-release)</a> · <a href="LICENSE">Licencia MIT</a></p>
+<p><a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest">Última versión estable</a> · <a href="LICENSE">Licencia MIT</a></p>
 
 <p><strong>DESCARGAS DIRECTAS</strong><br>
-<a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-win-x64.zip">Windows x64</a> · <a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-win-arm64.zip">Windows ARM64</a><br>
-<a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-osx-x64.tar.gz">macOS Intel (x64)</a> · <a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-osx-arm64.tar.gz">macOS Apple Silicon (ARM64)</a><br>
-<a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-linux-x64.tar.gz">Linux x64</a> · <a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-linux-arm64.tar.gz">Linux ARM64</a></p>
+<a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest/download/MCP.MicrosoftPlanner-win-x64.zip">Windows x64</a> · <a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest/download/MCP.MicrosoftPlanner-win-arm64.zip">Windows ARM64</a><br>
+<a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest/download/MCP.MicrosoftPlanner-osx-x64.tar.gz">macOS Intel (x64)</a> · <a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest/download/MCP.MicrosoftPlanner-osx-arm64.tar.gz">macOS Apple Silicon (ARM64)</a><br>
+<a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest/download/MCP.MicrosoftPlanner-linux-x64.tar.gz">Linux x64</a> · <a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest/download/MCP.MicrosoftPlanner-linux-arm64.tar.gz">Linux ARM64</a></p>
 
 <p><strong>UTILICE SU CLIENTE MCP HABITUAL</strong><br>
 <a href="#opencode">OpenCode</a> · <a href="#claude-code">Claude Code</a> · <a href="#claude-desktop">Claude Desktop</a> · <a href="#codex-cli-extensión-ide-y-aplicación-chatgpt-de-escritorio">Codex</a> · <a href="#vs-code-con-github-copilot">VS Code con Copilot</a> · <a href="#cursor">Cursor</a> · <a href="#gemini-cli">Gemini CLI</a> · <a href="#otros-clientes">Otros clientes</a></p>
@@ -47,16 +47,16 @@ No incluye Work IQ ni alojamiento en Azure. Cada organización aporta su propio 
 
 ### 1. Obtener el programa
 
-Descargue los archivos desde la [Release v1.0.0](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/tag/v1.0.0). Es una **versión preliminar**: la ejecución en Linux/macOS y el primer inicio de sesión sin caché aún requieren verificación. Los paquetes incluyen .NET 10; **no hace falta instalar el runtime** para usarlos. Elija el archivo correspondiente a su sistema y arquitectura, y extraiga **todo** su contenido en una carpeta permanente:
+Descargue los archivos desde la [última release estable](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest). La ejecución en Linux/macOS y el primer inicio de sesión sin caché aún requieren verificación. Los paquetes incluyen .NET 10; **no hace falta instalar el runtime** para usarlos. Elija el archivo correspondiente a su sistema y arquitectura, y extraiga **todo** su contenido en una carpeta permanente:
 
 | Sistema | Arquitectura | Descarga directa |
 | --- | --- | --- |
-| Windows | x64 | [MCP.MicrosoftPlanner-win-x64.zip](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-win-x64.zip) |
-| Windows | ARM64 | [MCP.MicrosoftPlanner-win-arm64.zip](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-win-arm64.zip) |
-| Linux | x64 | [MCP.MicrosoftPlanner-linux-x64.tar.gz](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-linux-x64.tar.gz) |
-| Linux | ARM64 | [MCP.MicrosoftPlanner-linux-arm64.tar.gz](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-linux-arm64.tar.gz) |
-| macOS | Intel (x64) | [MCP.MicrosoftPlanner-osx-x64.tar.gz](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-osx-x64.tar.gz) |
-| macOS | Apple Silicon (ARM64) | [MCP.MicrosoftPlanner-osx-arm64.tar.gz](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-osx-arm64.tar.gz) |
+| Windows | x64 | [MCP.MicrosoftPlanner-win-x64.zip](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest/download/MCP.MicrosoftPlanner-win-x64.zip) |
+| Windows | ARM64 | [MCP.MicrosoftPlanner-win-arm64.zip](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest/download/MCP.MicrosoftPlanner-win-arm64.zip) |
+| Linux | x64 | [MCP.MicrosoftPlanner-linux-x64.tar.gz](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest/download/MCP.MicrosoftPlanner-linux-x64.tar.gz) |
+| Linux | ARM64 | [MCP.MicrosoftPlanner-linux-arm64.tar.gz](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest/download/MCP.MicrosoftPlanner-linux-arm64.tar.gz) |
+| macOS | Intel (x64) | [MCP.MicrosoftPlanner-osx-x64.tar.gz](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest/download/MCP.MicrosoftPlanner-osx-x64.tar.gz) |
+| macOS | Apple Silicon (ARM64) | [MCP.MicrosoftPlanner-osx-arm64.tar.gz](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/latest/download/MCP.MicrosoftPlanner-osx-arm64.tar.gz) |
 
 El ZIP automático **Source code** de GitHub contiene solo el código fuente, no el ejecutable; use uno de los seis archivos anteriores.
 
