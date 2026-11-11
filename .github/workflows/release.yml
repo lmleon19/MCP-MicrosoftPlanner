@@ -1,0 +1,56 @@
+
+name: Publicar Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Obtener codigo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Instalar .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restaurar dependencias
+        run: dotnet restore
+
+      - name: Compilar solucion
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Ejecutar pruebas
+        run: dotnet test --configuration Release --no-build
+
+      - name: Generar paquetes
+        shell: pwsh
+        run: |
+          ./scripts/publicar-plataformas.ps1 `
+            -Configuration Release `
+            -OutputRoot dist
+
+      - name: Publicar en GitHub Releases
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$env:RELEASE_TAG" `
+            dist/*.zip dist/*.tar.gz `
+            --verify-tag `
+            --generate-notes `
+            --prerelease `
+            --title "MCP Microsoft Planner $env:RELEASE_TAG"
