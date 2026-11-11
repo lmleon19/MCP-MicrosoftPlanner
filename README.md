@@ -1,12 +1,24 @@
-# MCP Microsoft Planner
+<div align="center">
 
-**Versión del proyecto: 1.0.0** · Aún sin versión publicada para descarga.
+<h1>MCP Microsoft Planner</h1>
 
-**Acceda a Planner básico desde su cliente MCP sin pasar por Work IQ.** Este servidor local usa Microsoft Graph, autenticación delegada de Microsoft Entra y transporte stdio. El mismo ejecutable abre un configurador para guardar los identificadores de cada organización.
+<p><strong>Acceda a Planner básico desde el agente de IA que ya utiliza, sin pasar por Work IQ.</strong></p>
 
-[Empezar](#inicio-rápido) · [Herramientas](#herramientas-disponibles) · [Solucionar problemas](#solucionar-problemas) · [Contribuir](CONTRIBUTING.md)
+<p><a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/tag/v1.0.0">Versión 1.0.0 (pre-release)</a> · <a href="LICENSE">Licencia MIT</a></p>
 
-Windows · macOS · Linux | x64 · ARM64 | [Licencia MIT](LICENSE)
+<p><strong>DESCARGAS DIRECTAS</strong><br>
+<a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-win-x64.zip">Windows x64</a> · <a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-win-arm64.zip">Windows ARM64</a><br>
+<a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-osx-x64.tar.gz">macOS Intel (x64)</a> · <a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-osx-arm64.tar.gz">macOS Apple Silicon (ARM64)</a><br>
+<a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-linux-x64.tar.gz">Linux x64</a> · <a href="https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-linux-arm64.tar.gz">Linux ARM64</a></p>
+
+<p><strong>UTILICE SU CLIENTE MCP HABITUAL</strong><br>
+<a href="#opencode">OpenCode</a> · <a href="#claude-code">Claude Code</a> · <a href="#claude-desktop">Claude Desktop</a> · <a href="#codex-cli-extensión-ide-y-aplicación-chatgpt-de-escritorio">Codex</a> · <a href="#vs-code-con-github-copilot">VS Code con Copilot</a> · <a href="#cursor">Cursor</a> · <a href="#gemini-cli">Gemini CLI</a> · <a href="#otros-clientes">Otros clientes</a></p>
+
+<p><a href="#inicio-rápido">Inicio rápido</a> · <a href="#herramientas-disponibles">Herramientas</a> · <a href="#solucionar-problemas">Solucionar problemas</a> · <a href="CONTRIBUTING.md">Contribuir</a></p>
+
+</div>
+
+Este servidor MCP local usa Microsoft Graph, autenticación delegada de Microsoft Entra y transporte stdio. El mismo ejecutable abre un configurador para guardar los identificadores de cada organización.
 
 ## Por qué existe
 
@@ -15,8 +27,6 @@ Microsoft ofrece **[Work IQ MCP](https://learn.microsoft.com/en-us/microsoft-365
 Si lo que se necesita es **consultar y modificar planes básicos de Planner**, esa capa de inteligencia y su modelo de cobro pueden resultar innecesarios. Este proyecto ofrece herramientas MCP específicas que llaman directamente a la [API de Planner en Microsoft Graph v1.0](https://learn.microsoft.com/en-us/graph/api/resources/planner-overview): **no invoca Work IQ ni consume Copilot Credits por Work IQ**. Sigue requiriendo acceso autorizado a Planner, los permisos delegados correspondientes y las licencias de Microsoft 365 que correspondan a la organización. Los costos del cliente de IA que use el MCP son independientes.
 
 La diferencia de alcance es importante: **[la API de Planner en Graph solo expone planes básicos, no planes premium](https://learn.microsoft.com/en-us/graph/api/resources/planner-overview)**. Este servidor no sustituye las capacidades de búsqueda semántica, razonamiento y contexto empresarial de Work IQ.
-
-> **Estado de distribución:** el repositorio puede generar seis paquetes autocontenidos; aún no se ha publicado una versión descargable. Para probarlo ahora, compile desde el código fuente o genere un paquete localmente.
 
 ## Qué incluye
 
@@ -29,7 +39,7 @@ No incluye Work IQ ni alojamiento en Azure. Cada organización aporta su propio 
 
 ## Inicio rápido
 
-1. [Obtenga el programa](#1-obtener-el-programa): descargue y extraiga el paquete de su plataforma cuando haya una versión publicada, o compile desde el código.
+1. [Obtenga el programa](#1-obtener-el-programa): descargue y extraiga el paquete de su plataforma, o compile desde el código.
 2. [Prepare Microsoft Entra](#2-preparar-microsoft-entra): registre un cliente público y anote el Tenant ID y el Client ID.
 3. [Guarde los identificadores](#3-guardar-la-configuración): abra el ejecutable del paquete y guarde la configuración.
 4. [Conecte su cliente MCP](#4-conectar-un-cliente-mcp): apunte el cliente al mismo ejecutable con el argumento `--mcp`.
@@ -37,13 +47,18 @@ No incluye Work IQ ni alojamiento en Azure. Cada organización aporta su propio 
 
 ### 1. Obtener el programa
 
-Los paquetes incluyen .NET 10; **no hace falta instalar el runtime** para usarlos. Elija el archivo correspondiente a su sistema y arquitectura, y extraiga **todo** su contenido en una carpeta permanente:
+Descargue los archivos desde la [Release v1.0.0](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/tag/v1.0.0). Es una **versión preliminar**: la ejecución en Linux/macOS y el primer inicio de sesión sin caché aún requieren verificación. Los paquetes incluyen .NET 10; **no hace falta instalar el runtime** para usarlos. Elija el archivo correspondiente a su sistema y arquitectura, y extraiga **todo** su contenido en una carpeta permanente:
 
-| Sistema | Archivo generado |
-| --- | --- |
-| Windows x64 / ARM64 | `MCP.MicrosoftPlanner-win-x64.zip` / `MCP.MicrosoftPlanner-win-arm64.zip` |
-| Linux x64 / ARM64 | `MCP.MicrosoftPlanner-linux-x64.tar.gz` / `MCP.MicrosoftPlanner-linux-arm64.tar.gz` |
-| macOS Intel / Apple Silicon | `MCP.MicrosoftPlanner-osx-x64.tar.gz` / `MCP.MicrosoftPlanner-osx-arm64.tar.gz` |
+| Sistema | Arquitectura | Descarga directa |
+| --- | --- | --- |
+| Windows | x64 | [MCP.MicrosoftPlanner-win-x64.zip](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-win-x64.zip) |
+| Windows | ARM64 | [MCP.MicrosoftPlanner-win-arm64.zip](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-win-arm64.zip) |
+| Linux | x64 | [MCP.MicrosoftPlanner-linux-x64.tar.gz](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-linux-x64.tar.gz) |
+| Linux | ARM64 | [MCP.MicrosoftPlanner-linux-arm64.tar.gz](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-linux-arm64.tar.gz) |
+| macOS | Intel (x64) | [MCP.MicrosoftPlanner-osx-x64.tar.gz](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-osx-x64.tar.gz) |
+| macOS | Apple Silicon (ARM64) | [MCP.MicrosoftPlanner-osx-arm64.tar.gz](https://github.com/lmleon19/MCP-MicrosoftPlanner/releases/download/v1.0.0/MCP.MicrosoftPlanner-osx-arm64.tar.gz) |
+
+El ZIP automático **Source code** de GitHub contiene solo el código fuente, no el ejecutable; use uno de los seis archivos anteriores.
 
 En la carpeta extraída encontrará un solo ejecutable de la aplicación, `MCP.MicrosoftPlanner.exe` (Windows) o `MCP.MicrosoftPlanner` (macOS/Linux), y los avisos de licencia. **No es un instalador:** no registra el MCP en los clientes ni instala un servicio del sistema.
 
