@@ -4,8 +4,8 @@
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="Avalonia" Version="11.3.22" />
-    <PackageVersion Include="Avalonia.Desktop" Version="11.3.22" />
+    <PackageVersion Include="Avalonia" Version="12.1.6" />
+    <PackageVersion Include="Avalonia.Desktop" Version="12.1.6" />
     <PackageVersion Include="Avalonia.Themes.Fluent" Version="11.3.22" />
     <PackageVersion Include="Microsoft.Graph" Version="6.10.0" />
     <PackageVersion Include="Microsoft.Identity.Client" Version="4.92.0" />
