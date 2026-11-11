@@ -9,11 +9,11 @@
         <TextBlock TextWrapping="Wrap" Text="Usa el registro de aplicación proporcionado por tu organización." />
         <StackPanel Spacing="5">
           <TextBlock Text="Identificador del inquilino (Tenant ID)" />
-          <TextBox x:Name="TenantInput" Watermark="Identificador del inquilino o dominio" />
+          <TextBox x:Name="TenantInput" PlaceholderText="Identificador del inquilino o dominio" />
         </StackPanel>
         <StackPanel Spacing="5">
           <TextBlock Text="Identificador de la aplicación (Client ID)" />
-          <TextBox x:Name="ClientInput" Watermark="Identificador de la aplicación" />
+          <TextBox x:Name="ClientInput" PlaceholderText="Identificador de la aplicación" />
         </StackPanel>
         <StackPanel Spacing="5">
           <CheckBox x:Name="SoloLecturaInput" Content="Solo lectura (sin herramientas de escritura)" />
